@@ -1,6 +1,5 @@
-FROM ubuntu:trusty
+FROM ubuntu:xenial
 
-# Install system basics
 RUN apt-get update && apt-get install -y \
         fakeroot \
         git \
