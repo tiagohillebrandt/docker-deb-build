@@ -7,5 +7,6 @@ RUN add-apt-repository ppa:git-core/ppa -y
 RUN apt-get update && apt-get install -y \
         fakeroot \
         git \
+        mailutils \
         make \
         packaging-dev
