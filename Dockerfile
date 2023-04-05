@@ -8,10 +8,11 @@ RUN apt-get update && apt-get install -yq \
     dput \
     gpg \
     curl \
-    wget
+    wget \
     fakeroot \
     git \
     make \
-    packaging-dev
+    packaging-dev \
+    vim
 
 RUN mkdir -p /root/.ssh && touch /root/.ssh/known_hosts && ssh-keyscan github.com >> /root/.ssh/known_hosts && echo "StrictHostKeyChecking no" >> /etc/ssh/ssh_config
