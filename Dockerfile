@@ -19,4 +19,8 @@ RUN apt-get update && apt-get install -yq \
     packaging-dev \
     vim
 
-RUN mkdir -p /root/.ssh && touch /root/.ssh/known_hosts && ssh-keyscan github.com >> /root/.ssh/known_hosts && echo "StrictHostKeyChecking no" >> /etc/ssh/ssh_config
+RUN useradd -s /bin/bash -d /home/ubuntu/ -m -G sudo ubuntu
+
+RUN echo "StrictHostKeyChecking no" >> /etc/ssh/ssh_config
+
+RUN echo "su - ubuntu" >> /root/.bashrc
